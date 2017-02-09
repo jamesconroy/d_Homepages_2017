@@ -1,0 +1,463 @@
+<style>
+	/*-----------BREAKOUT-----------*/
+  .fullWidth .width1008Center {margin: 0 auto !important;width: 100% !important;max-width:1680px;}
+  #footerContainer {float: none !important;margin: -1px auto 30px !important;}
+  #topNavContainer {border:none;}
+  #bodyWrap {padding: 0;}
+  #pageWrap {border-top: 2px solid #222;max-width: 1680px;min-width: 1024px;margin: 0 auto !important;float: none !important;clear: left;}
+  #jsExpand1 {margin:0 !important;}
+  #themeContainer1 {display:none;}
+  #cmpr_querybuilder {display:none;}
+  .smallWrapper {width: 1008px;margin: 0 auto;}
+  #topNavWrap {background: transparent;} 
+  /*-----------BREAKOUT-----------*/
+  /*-----------SCB FIXES----------*/
+  .content.jsRenderBody {max-width: 1680px;margin: 0 auto;}
+  p {margin: 0;}
+  /*----------SCB FIXES-----------*/
+  
+  /*FONT SIZES*/
+  .headlineXL {font-size: calc(56px + (72 - 56) * (100vw - 1024px) / (1680 - 1024));line-height:calc(52px + (68 - 52) * (100vw - 1024px) / (1680 - 1024));letter-spacing:-.15vw;}
+  .headlineL {font-size: calc(40px + (56 - 40) * (100vw - 1024px) / (1680 - 1024));line-height:calc(40px + (52 - 40) * (100vw - 1024px) / (1680 - 1024));letter-spacing:-.05vw;word-spacing:-.2vw;}
+  .headlineM {font-size: calc(32px + (40 - 32) * (100vw - 1024px) / (1680 - 1024));line-height:calc(36px + (40 - 36) * (100vw - 1024px) / (1680 - 1024));letter-spacing:-.1vw;word-spacing:-.1vw;}
+  .headlineS {font-size: calc(24px + (32 - 24) * (100vw - 1024px) / (1680 - 1024));line-height:calc(28px + (36 - 28) * (100vw - 1024px) / (1680 - 1024));}
+  .copyXL {font-size: calc(24px + (32 - 24) * (100vw - 1024px) / (1680 - 1024));line-height:calc(28px + (36 - 28) * (100vw - 1024px) / (1680 - 1024));}
+  .copyL {font-size: calc(20px + (24 - 20) * (100vw - 1024px) / (1680 - 1024));line-height:calc(24px + (28 - 24) * (100vw - 1024px) / (1680 - 1024));letter-spacing:-.05vw;}
+  .copyM {font-size: calc(16px + (20 - 16) * (100vw - 1024px) / (1680 - 1024));line-height:calc(20px + (24 - 20) * (100vw - 1024px) / (1680 - 1024));}
+  .copyS {font-size: calc(14px + (16 - 14) * (100vw - 1024px) / (1680 - 1024));line-height:calc(20px + (20 - 20) * (100vw - 1024px) / (1680 - 1024));}
+  .copyXS {font-size: calc(12px + (14 - 12) * (100vw - 1024px) / (1540 - 1024));line-height: calc(16px + (20 - 16) * (100vw - 1024px) / (1540 - 1024));}
+  .supS {font-size:.74vw;}
+  /*FONT SIZES*/
+  
+  /* RANDOM */
+  .fullDiv {width:100%;min-width: 1024px;max-width:1680px;position:relative;overflow:hidden;margin-bottom:.2vw;}
+  .fullDiv a {color: #222;text-decoration:none;}
+  .marginDiv {width:95%;min-width: 964px;max-width:1680px;position:relative;overflow:hidden;margin:2.5% auto;}
+  .marginDiv a {color: #222;}
+  .divMargins {margin-bottom: 2% !important;}
+  .fullImg {width:100%;max-width:1680px;}
+  .textDiv {position:absolute;}
+  .cmsArrowR {border-width:.4vw;}
+  .whtArrw {border-left-color: white;}
+  .ctaMargin {margin: 1vw 0;}
+  .subMargin {margin: 1vw 0 0;}
+  .badgeText{position: relative;top:50%;transform: translateY(-50%);text-align: center;}
+  .badgeText{position: relative;top:50%;transform: translateY(-50%);text-align: center;}
+  .badgeSize{position: absolute;bottom:2%;left:2vw;background-color: rgba(255,255,255,.87);border-radius: 50%;height:12.5vw;width:12.5vw;}
+  /* RANDOM */
+  /*CAROUSEL*/
+  .caroText {position: absolute;top:10%;left:4%;background-color:rgba(255,255,255,.90);width:24%;padding:2%;}
+	.prevBtn {float:left;}
+	.nextBtn {float:right;}
+	.saleBtn svg {enable-background:new 0 0 115.1 219.7;fill: #000;width: 10px;cursor:pointer;display:inline-block;padding-top:3px;}
+	.arrowContainer {width:150px;margin:0 auto;overflow:hidden;}
+	.slick-dots {position: absolute;display: block;width: 120px;left:0;right:0;margin:auto;padding: 0;list-style: none;text-align: center;padding-top:2px;}
+	.slick-dots li {position: relative;display: inline-block;width: 20px;height: 20px;margin: 0 5px;padding: 0;cursor: pointer;}
+	.slick-dots li button {font-size: 0;line-height: 0;display: block;width: 20px;height: 20px;padding: 5px;cursor: pointer;color: transparent;border: 0;outline: none;background: transparent;}
+	.slick-dots li button:hover,
+	.slick-dots li button:focus {outline: none;}
+	.slick-dots li button:hover:before,
+	.slick-dots li button:focus:before {opacity: 1;}
+	.slick-dots li button:before {font-family: 'slick';font-size: 40px;line-height: 20px;position: absolute;top: 0;left: 0;width: 20px;height: 20px;content: '•';text-align: center;opacity: .25;color: black;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+	.slick-dots li.slick-active button:before {opacity: .75;color: black;}
+  /*CAROUSEL*/
+
+  .cbccDiv {margin-bottom: 2.38vw}
+
+	.likeliDiv {width:1008px;margin:2% auto;}
+	.textureText {top:18%;left:11%;color:#fff;}
+	.greenText {text-align:right;top:40%;width:35%;}
+	.cbccText {width:53%;right:0;top:50%;transform:translateY(-50%);}
+	.cbccText sup {top:-0.7vw;}
+
+	.bedText {top:7%;left:30%;}
+	.vdayText {width:64%;right:0;top:76%;}
+	.kitchenText {top:11%;left:68vw;}
+	.wedSweepText {text-align:center;left:0;right:0;top:50%;transform:translateY(-50%);}
+	.rwlText {top:2%;left:20vw;}
+	.artistDiv {width:34%;text-align:left;right:0;top:50%;transform:translateY(-50%);}
+	/* BLOG */
+  .blogDiv {width:70%;min-width: 824px;max-width:1176px;position:relative;overflow:hidden;margin:2% auto;}
+	.blogDiv img {width:100%;}
+  .blogLogo {width: 20%;margin: 0% auto;max-width: 207px;position: relative;display: block;padding-top: 5%;}
+  .blogText { color: #fff;width: 100%;position: absolute;bottom: 0;left: 0;padding: 3%;background-color: #222;margin: 0;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+  .blogInDivBig {width: 66.5%;float: left;}
+  .blogInDivSmall {width:33%;float: left;margin-right: .5%;}
+  .blogDiv a {position: relative; float: left;}
+  /*REGISTRY*/
+  .registryText {position:absolute;left:30vw;top: 50%;transform: translateY(-50%);}
+  /*CURALATE*/
+  #curalate-fan-reel-wrapper {width:70%;overflow:auto;margin:1% auto;}
+  .curalateText {display: block;margin: 0 auto;padding-top: 5%;}
+  .curalateMargins {min-width: 824px;max-width:1176px;position:relative;}
+  .curalateDiv {width: 100%;max-width: 1680px;min-width: 1024px;background-color: #f0f0f0;    padding-bottom: 6%;
+    margin-top: 3%;}
+  /*CURALATE*/
+	/*PAGE BOTTOM*/
+  .bottomLinks {width: 100%;min-width: 1024px;max-width: 1540px;margin: 2% 0 0 0;}
+  .bottomquad {margin: 4% 2% 2% 2%;padding-bottom: 4%;display: flex;max-width: 1540px;}
+  .quarterContent {flex: 0 1 25%;padding: 0 1vw 0 1vw;margin-right: 2vw;}
+  .bordertop {border-top: 8px solid #ccc;position: relative;content: "";width: 100%;margin-top: -8px;padding-top: 8px; }
+  .bordertop:hover {border-top: 8px solid #222;transition: border-top .1s linear;}
+  .bottomLinks a {color: #222;text-decoration: none;}
+  /*PAGE BOTTOM*/
+
+  /*--- 1024px ---*/
+  @media only screen and (max-width: 1024px) {
+    .headlineXL {font-size:56px;line-height:52px;letter-spacing:-1.54px;}
+    .headlineL {font-size:40px;line-height:40px;}
+    .headlineM {font-size:32px;line-height:36px;letter-spacing:-1.02px;}
+    .headlineS {font-size:24px;line-height:28px;}
+    .copyXL {font-size:24px;line-height:28px;}
+    .copyL {font-size:20px;line-height:24px;letter-spacing:-.84px;}
+    .copyM {font-size:16px;line-height:20px;}
+    .copyS {font-size:14px;line-height:20px;}
+    /*1024px*/
+    .cmsArrowR {border-width:4px;}
+    .ctaMargin {margin: 10.24px 0;}
+    .badgeSize{left:20.48px;height:128px;width:128px;}
+    /*REGISTRY*/
+    .registryText {left:307.2px;}
+    /*REGISTRY*/
+    .cbccDiv {margin-bottom: 24.37px;}
+    /*CURALATE*/
+    .curalateText {margin-left:20.48px;}
+    /*CURALATE*/
+    /*PAGE BOTTOM*/
+    .quarterContent {padding-left: 20.48px;}
+    /*PAGE BOTTOM*/
+
+		.cbccText sup {top:-7.17px;}
+		.kitchenText {left:696.32px;}
+		.rwlText {left:204.80px;}
+  }
+
+  /*--- 1680px ---*/
+  @media only screen and (min-width: 1680px) {
+    .headlineXL {font-size:72px;line-height:68px;letter-spacing:-2.52px;}
+    .headlineL {font-size:56px;line-height:52px;}
+    .headlineM {font-size:40px;line-height:40px;letter-spacing:-1.68px;}
+    .headlineS {font-size:32px;line-height:36px;}
+    .copyXL {font-size:32px;line-height:36px;}
+    .copyL {font-size:24px;line-height:28px;letter-spacing:-.51px;}
+    .copyM {font-size:20px;line-height:24px;}
+    .copyS {font-size:16px;line-height:20px;}
+    /* 1680px */
+    .cmsArrowR {border-width:7px;}
+    .ctaMargin {margin: 16.8px 0 ;}
+    .badgeSize{left:33.6px;height:210px;width:210px;}
+    /*REGISTRY*/
+    .registryText {left:504px;}
+    /*REGISTRY*/
+    .cbccDiv {margin-bottom: 40px;}
+    /*CURALATE*/
+    .curalateText {margin-left:33.60px;width:100%;}
+    #curalate-fan-reel-wrapper {width:100%;}
+    /*CURALATE*/
+    /*PAGE BOTTOM*/
+    .bottomLinks {margin: 3.36px 0 0% 0;}
+    .quarterContent {padding-left: 33.60px;}
+    /*PAGE BOTTOM*/
+
+		.cbccText sup {top:-11.76px;}
+		.kitchenText {left:1142.40px;}
+		.rwlText {left:336.00px;}
+  }
+</style>
+
+<!-- HERO -->
+<div class='fullDiv'>
+  <a href="/sale/bed-sale/">
+    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_BdBdgMtrs_20170209?wid=1680" alt=''>
+    <div class='textDiv bedText'>
+      <p class='crate-helvetica-bold headlineL ctaMargin'><span class='cmsRed'>Up to 20% off</span><br>Beds, Bedding<br>and Mattresses</p>
+      <p class='crate-helvetica-light copyL subMargin'>Now through February 20.</p>
+      <p class='crate-helvetica-bold copyL ctaMargin'>Shop the Sale <span class="cmsArrowR"></span></p>
+    </div>
+  </a>
+</div>
+
+<!-- GREENHOUSE -->
+<div class='marginDiv'>
+  <a href="/conservatory-decor">
+    <div style='width:62%;float:right;'>
+      <img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_Greenhouse_20170201" alt=''>
+    </div>
+    <div class='textDiv greenText'>
+      <p class='crate-helvetica-bold headlineM'>It&rsquo;s unreal how<br>real they look.</p>
+      <p class='crate-helvetica-bold copyM ctaMargin'>Shop Greenhouse <span class="cmsArrowR"></span></p>
+    </div>
+  </a>
+</div>
+
+<!-- TEXTURE -->
+<div class='fullDiv'>
+  <a href="/special-features/texture-design-trend/1">
+    <img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_NtrlTxtr_20170209?wid=1680" alt=''>
+    <div class='textDiv textureText'>
+      <p class='crate-helvetica-bold headlineL'>A quiet statement<br>with a bold message.</p>
+      <p class='crate-helvetica-bold copyL ctaMargin'>Shop Natural Textures <span class="cmsArrowR whtArrw"></span></p>
+    </div>
+  </a>
+</div>
+
+<!-- Valentines Day -->
+<div class='fullDiv'>
+  <a href="/valentines-day/1">
+    <img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_VlntnsDy_20170201?wid=1680" alt=''>
+    <div class='textDiv vdayText'>
+      <p class='crate-helvetica-light headlineM'>Wine and Cheese. <strong>What a Pair.</strong></p>
+      <p class='crate-helvetica-bold copyM ctaMargin'>Shop Valentines Day <span class="cmsArrowR"></span></p>
+    </div>
+  </a>
+</div>
+
+<!-- Kitchen -->
+<div class='fullDiv'>
+  <a href="/kitchen-and-food/kitchen-styles/">
+    <img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_InsprdKtchn_20170201?wid=1680" alt=''>
+    <div class='textDiv kitchenText'>
+      <p class='crate-helvetica-bold headlineM ctaMargin'>A throwback<br>hue that&rsquo;s never<br>looked fresher.</p>
+      <p class='crate-helvetica-bold copyM ctaMargin'>Shop Inspired Kitchen <span class="cmsArrowR"></span></p>
+    </div>
+  </a>
+</div>
+
+<!-- WEDDING SWEEPS -->
+<div class='fullDiv'>
+  <a href="/crateweddingsweeps">
+    <img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_WddngSwpstks_20170116?wid=1680" alt=''>
+    <div class='textDiv wedSweepText'>
+      <p class="crate-helvetica-roman copyM"><strong>#cratewedding</strong>sweepstakes</p>
+      <p class="crate-helvetica-bold headlineM">30 Days, 30 Must-Have Prizes</p>
+      <p class="crate-helvetica-roman copyM subMargin"> Big day on the way? Share your wedding prep moments on Instagram using #crateweddingsweepstakes<br>for your chance to win great registry items. Ends February 14.</p>
+      <p class="crate-helvetica-bold copyM ctaMargin">Learn More <span class="cmsArrowR"></span></p>
+    </div>
+  </a>
+</div>
+
+<!-- LIKELYHOOD -->
+<div class='likeliDiv'>
+  <script>!window.lkhd_BFp88A&&addEventListener('message',function(m){if(m.data.id==='BFp88A'){if(window._satellite&&window._satellite.lkhdImpression){window._satellite.lkhdImpression(m.data.id,m.data.type)}else{(window.s_lkhd=window.s_lkhd||[]).push(m.data)}}});window.lkhd_BFp88A=1</script><iframe id="BFp88A" src="https://published.likelihood.com/render/c401256/latest/BFp88A" width="1008" height="498" style="border:0"></iframe>
+</div>
+
+<!-- CAROUSEL -->
+<div class='fullDiv'>
+  <a href="/outdoor-furniture-collections/">
+  	<div class="outdoorCaro">
+	    <div><img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnRegent_20170201?wid=1680" alt=''></div>
+	    <div><img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnRegatta_20170201?wid=1680" alt=''></div>
+	    <div><img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnRocha_20170201?wid=1680" alt=''></div>
+	    <div><img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnAster_20170201?wid=1680" alt=''></div>
+	  </div>
+	</a>
+  
+  <div class='caroText'>
+  	<div class='outdoorCaro-Text'>
+      <div>
+      	<p class='crate-helvetica-thin headlineM'>Regent:<br><strong>An ode to relaxed<br>refinement.</strong></p>
+      	<a href="/outdoor-furniture-collections/">
+      		<p class='crate-helvetica-bold copyM ctaMargin'>Shop Outdoor <span class="cmsArrowR"></span></p
+      			></a>
+      </div>
+      <div>
+      	<p class='crate-helvetica-thin headlineM'>Regatta:<br><strong>High-quality teak<br>hits the deck.</strong></p>
+      	<a href="/outdoor-furniture-collections/">
+      		<p class='crate-helvetica-bold copyM ctaMargin'>Shop Outdoor <span class="cmsArrowR"></span></p>
+      	</a>
+      </div>
+      <div>
+      	<p class='crate-helvetica-thin headlineM'>Rocha:<br><strong>The warm look<br>of real wood.</strong></p>
+      	<a href="/outdoor-furniture-collections/">
+      		<p class='crate-helvetica-bold copyM ctaMargin'>Shop Outdoor <span class="cmsArrowR"></span></p>
+      	</a>
+      </div>
+      <div>
+      	<p class='crate-helvetica-thin headlineM'>Aster:<br><strong>A dose of<br>café culture.</strong></p>
+      	<a href="/outdoor-furniture-collections/">
+      		<p class='crate-helvetica-bold copyM ctaMargin'>Shop Outdoor <span class="cmsArrowR"></span></p>
+      	</a>
+      </div>
+    </div>
+    <div class='arrowContainer'>
+      <div class='saleBtn prevBtn'>
+        <svg viewBox="0 0 115.1 219.7" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1">
+          <polygon points="115.1,5.2 109.9,0 5.2,104.6 0,109.9 5.2,115.1 5.2,115.1 109.9,219.7 115.1,214.5 10.4,109.9 "></polygon>
+        </svg>
+      </div>
+      <div class='saleBtn nextBtn'>
+        <svg viewBox="0 0 115.1 219.7" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1">
+          <polygon points="0,5.2 5.2,0 109.9,104.6 115.1,109.9 109.9,115.1 109.9,115.1 5.2,219.7 0,214.5 104.6,109.9 "></polygon>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Artists and Designers -->
+<div class='marginDiv'>
+  <div style='width:62%;float:left;'>
+    <a href="/artists-and-designers/blake-tovin/1">
+      <img style='width:100%' class="jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_ArtsDsgnr_20170201" alt=''>
+    </a>
+    <a href="/sale/bed-sale/">
+      <div class="badgeSize">
+        <div class="badgeText">
+          <p class="copyM crate-helvetica-bold"><span class="cmsRed">Up to 20% off</span><br>Beds, Bedding<br>and Mattresses</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <a href="/artists-and-designers/blake-tovin/1">
+    <div class='textDiv artistDiv'>
+      <img style='width:28%;margin-bottom:3%;' class="jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_ArtsDsgnrHeadshot_20170201" alt=''>
+      <p class="crate-helvetica-thin headlineM">Meet Designer<br><strong>Blake Tovin</strong></p>
+      <p class="crate-helvetica-roman copyM">“The Arch bed is a modern take<br>on the classic American<br>bentwood bed, pared down to<br>its essential elements.”</p>
+      <p class="crate-helvetica-bold copyM ctaMargin">Shop Blake Tovin <span class="cmsArrowR"></span></p>
+    </div>
+  </a>
+</div>
+
+<!-- ROOMS WE LOVE -->
+<div class='fullDiv'>
+  <a href="/shop-by-room/dryden-elegant-living-room/1">
+    <img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_RmsWeLv_20170201?wid=1680" alt=''>
+    <div class='textDiv rwlText'>
+      <p class="crate-helvetica-bold headlineM">Make your modern great room shine.</p>
+      <p class="crate-helvetica-bold copyM ctaMargin">Shop This Room <span class="cmsArrowR"></span></p>
+    </div>
+  </a>
+</div>
+
+<!-- BLOG -->
+<div class="fullDiv">
+  <a href="/blog/" target='_blank'>
+    <img class="blogLogo jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_BlgLg_20161114?wid=207" alt=''>
+  </a>
+  <div class='blogDiv'>
+    <div class='blogInDivSmall'>
+      <a href="/blog/crepes-recipe/" target="_blank">
+        <img class="jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_BlgCrepes_20170209?wid=552" alt=''>
+        <p class='blogText copyM crate-helvetica-light'><strong>Breakfast in Bed:</strong><br>Chai Crepes with Whipped Ricotta <span class="cmsArrowR whtArrw"></span></p>
+      </a>
+      <a href="/blog/vegan-miso-soup-recipe/" target="_blank" style="margin-top: 1.5%;">
+        <img class="jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_BlgMisoSoba_20170209?wid=552" alt=''>
+        <p class='blogText copyM crate-helvetica-light'><strong>Dinner Tonight:</strong><br>Vegan Miso Soba Noodle Soup <span class="cmsArrowR whtArrw"></span></p>
+      </a>
+    </div>
+    <a href="/blog/valentines-day-breakfast/" target="_blank" class='blogInDivBig'>
+      <img class="jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_BlgVlntnsDy_20170209?wid=1116" alt=''>
+      <p class='blogText copyM crate-helvetica-bold' style='padding:1.5%'>Start Valentine's Day the sweet way. <span class="cmsArrowR whtArrw"></span></p>
+    </a>
+  </div>
+</div>  
+
+
+<!-- CURALATE -->
+<div class="curalateDiv" style="">
+  <div class="curalateText">
+    <p class="crate-helvetica-light headlineM" style="text-transform:uppercase;text-align:center">#cratestyle</p>
+    <p class="copyM crate-helvetica-roman" style="text-align:center;"><a href="/Cratestyle">Share photos,</a> shop photos and get inspired. <br>Follow Us on Instagram @crateandbarrel</p>
+  </div>
+  <div id="curalate-fan-reel-wrapper" class='curalateMargins'></div>
+</div>
+<!-- CURALATE -->
+
+<!-- REGISTRY -->
+  <div class='fullDiv'>
+    <a href="/gift-registry/">
+      <img class="fullImg jsLazyLoad" src="//images.crateandbarrel.com/is/content/Crate/lazyload?fmt=gif" data-src="//images.crateandbarrel.com/is/image/Crate/dHP_GiftRegistry_160915_OMN16?wid=1920" alt="A Budding Romance Our wedding registry dishes out the best collection and advice around. Register Today">
+    </a>
+    <a href="/gift-registry/registrant/create-registry-step1.aspx">
+      <div class='registryText'>
+        <p class='headlineM cmsBlack crate-helvetica-bold'>A Budding <br>Romance</p>
+        <p class='copyM crate-helvetica-roman newBody' style='margin-top:1vw;'>Our wedding registry<br>dishes out the best collection<br>and advice around.</p>
+        <p class='copyM crate-helvetica-bold cmsBlack ctaMargin'>Register Today <span class="cmsArrowR"></span></p>
+      </div>
+    </a>
+  </div>
+<!-- REGISTRY -->
+
+<!-- BOTTOM OF PAGE -->
+<div style="background: #f3f3f3;">
+  <div class="bottomLinks divMargins" style="margin: auto;">
+    <p class="headlineS crate-helvetica-light" style="text-align:center;padding-top:3%;">Attention to the details</p>
+    <div class="bottomquad" style="justify-content: center;">
+      <div class="quarterContent bordertop" style="align-content: center;">
+        <a href="/Popup/Store-Pickup-FAQ.aspx?width=700&amp;height=500" class="thickbox" rel="noindex, nofollow" style="text-decoration:none;">
+          <p class="crate-helvetica-bold cmsBlack copyL">No waiting&hellip;no&nbsp;shipping.</p>
+          <p class="copyXS cmsBlack crate-helvetica-bold ">Buy online, pick up in stores.</p>
+          <p class="copyXS cmsBlack crate-helvetica-roman">Order eligible items online and pick up at a store near you. Choose the Store Pickup option at Checkout.</p>
+        </a>
+      </div>
+
+      <div class="quarterContent bordertop">
+        <a href="/gift-registry/" style="text-decoration: none;">
+          <p class="crate-helvetica-bold cmsBlack copyL">Free Shipping on Gift&nbsp;Registry orders of $99&nbsp;or&nbsp;more.</p>
+          <p class="copyXS cmsBlack crate-helvetica-roman">Some exclusions apply.</p>
+        </a>
+      </div>
+
+      <div class="quarterContent bordertop">
+        <a href="/Customer-Service/FAQ-Shipping-Delivery.aspx" style="text-decoration: none;">
+        <p class="crate-helvetica-bold cmsBlack copyL">Unlimited furniture delivery for one flat&nbsp;fee.</p>
+        <p class="copyXS cmsBlack crate-helvetica-roman">For one low flat fee per trip, we will deliver every piece of furniture in your order regardless of the number of items.</p>
+        </a>
+      </div>
+
+      <div class="quarterContent bordertop">
+        <a href="/Customer-Service/FAQ-Shipping-Delivery.aspx" style="text-decoration: none;">
+        </a>
+        <a href="/Rewards/" style="text-decoration: none;">
+          <p class="crate-helvetica-bold cmsBlack copyL">Earn 10% back in reward&nbsp;dollars.</p>
+          <p class="copyXS cmsBlack crate-helvetica-roman">The Crate and Barrel Credit Card is designed to reward you every time you shop at Crate and Barrel, CB2 and The Land of Nod. Applications subject to credit approval.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://d116tqlcqfmz3v.cloudfront.net/crateandbarrel-288/gallery.js"></script>
+<script defer type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
+<script type="text/javascript">
+  Curalate.FanReels.Gallery.init({ code: "crateandbarrel", filters: {tags: "homepage"} })  
+
+  function runTheThings(){
+  	$(document).ready(function() {
+	  	$('.outdoorCaro').slick({
+	  		dots: false,
+		    arrows: false,
+		    infinite: true,
+		    fade:true,
+		    speed: 1500,
+		    cssEase: 'ease-in-out',
+		    asNavFor: '.outdoorCaro-Text',
+		    autoplay: true,
+		    autoplaySpeed: 3000
+		  });
+		  $('.outdoorCaro-Text').slick({
+		  	asNavFor: '.outdoorCaro',
+		    fade:true,
+		    speed: 1200,
+		    dots: true,
+		    prevArrow: $('.prevBtn'),
+		    nextArrow: $('.nextBtn')  
+		  });
+		})
+  };
+
+  function jQueryIsLoaded() {
+		if (window.jQuery) {
+			console.log("jQuery is loaded");
+
+			runTheThings();
+		} else {
+			setTimeout(jQueryIsLoaded, 50);
+		}
+	}
+
+	jQueryIsLoaded();
+	
+</script>

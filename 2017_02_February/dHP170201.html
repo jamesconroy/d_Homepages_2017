@@ -22,8 +22,8 @@
   .headlineM {font-size: calc(32px + (40 - 32) * (100vw - 1024px) / (1680 - 1024));line-height:calc(36px + (40 - 36) * (100vw - 1024px) / (1680 - 1024));letter-spacing:-.1vw;word-spacing:-.1vw;}
   .headlineS {font-size: calc(24px + (32 - 24) * (100vw - 1024px) / (1680 - 1024));line-height:calc(28px + (36 - 28) * (100vw - 1024px) / (1680 - 1024));}
   .copyXL {font-size: calc(24px + (32 - 24) * (100vw - 1024px) / (1680 - 1024));line-height:calc(28px + (36 - 28) * (100vw - 1024px) / (1680 - 1024));}
-  .copyL {font-size: calc(21px + (24 - 21) * (100vw - 1024px) / (1680 - 1024));line-height:calc(24px + (28 - 24) * (100vw - 1024px) / (1680 - 1024));letter-spacing:-.05vw;}
-  .copyM {font-size: calc(16px + (21 - 16) * (100vw - 1024px) / (1680 - 1024));line-height:calc(20px + (24 - 20) * (100vw - 1024px) / (1680 - 1024));}
+  .copyL {font-size: calc(20px + (24 - 20) * (100vw - 1024px) / (1680 - 1024));line-height:calc(24px + (28 - 24) * (100vw - 1024px) / (1680 - 1024));letter-spacing:-.05vw;}
+  .copyM {font-size: calc(16px + (20 - 16) * (100vw - 1024px) / (1680 - 1024));line-height:calc(20px + (24 - 20) * (100vw - 1024px) / (1680 - 1024));}
   .copyS {font-size: calc(14px + (16 - 14) * (100vw - 1024px) / (1680 - 1024));line-height:calc(20px + (20 - 20) * (100vw - 1024px) / (1680 - 1024));}
   .copyXS {font-size: calc(12px + (14 - 12) * (100vw - 1024px) / (1540 - 1024));line-height: calc(16px + (20 - 16) * (100vw - 1024px) / (1540 - 1024));}
   .supS {font-size:.74vw;}
@@ -34,6 +34,7 @@
   .fullDiv a {color: #222;text-decoration:none;}
   .marginDiv {width:95%;min-width: 964px;max-width:1680px;position:relative;overflow:hidden;margin:2.5% auto;}
   .marginDiv a {color: #222;}
+  .divMargins {margin-bottom: 2% !important;}
   .fullImg {width:100%;max-width:1680px;}
   .textDiv {position:absolute;}
   .cmsArrowR {border-width:.4vw;}
@@ -44,64 +45,52 @@
   .badgeText{position: relative;top:50%;transform: translateY(-50%);text-align: center;}
   .badgeSize{position: absolute;bottom:2%;left:2vw;background-color: rgba(255,255,255,.87);border-radius: 50%;height:12.5vw;width:12.5vw;}
   /* RANDOM */
-  
-  /*   FREE SHIPPING */
-  .freeshipText {color:#fff;top:10%;right:7vw;text-align:right;}
+  /*CAROUSEL*/
+  .caroText {position: absolute;top:10%;left:4%;background-color:rgba(255,255,255,.90);width:24%;padding:2%;}
+	.prevBtn {float:left;}
+	.nextBtn {float:right;}
+	.saleBtn svg {enable-background:new 0 0 115.1 219.7;fill: #000;width: 10px;cursor:pointer;display:inline-block;padding-top:3px;}
+	.arrowContainer {width:150px;margin:0 auto;overflow:hidden;}
+	.slick-dots {position: absolute;display: block;width: 120px;left:0;right:0;margin:auto;padding: 0;list-style: none;text-align: center;padding-top:2px;}
+	.slick-dots li {position: relative;display: inline-block;width: 20px;height: 20px;margin: 0 5px;padding: 0;cursor: pointer;}
+	.slick-dots li button {font-size: 0;line-height: 0;display: block;width: 20px;height: 20px;padding: 5px;cursor: pointer;color: transparent;border: 0;outline: none;background: transparent;}
+	.slick-dots li button:hover,
+	.slick-dots li button:focus {outline: none;}
+	.slick-dots li button:hover:before,
+	.slick-dots li button:focus:before {opacity: 1;}
+	.slick-dots li button:before {font-family: 'slick';font-size: 40px;line-height: 20px;position: absolute;top: 0;left: 0;width: 20px;height: 20px;content: '•';text-align: center;opacity: .25;color: black;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+	.slick-dots li.slick-active button:before {opacity: .75;color: black;}
+  /*CAROUSEL*/
 
-  /* MEDIA SALE */
-  .consoleText {color:#222;top:10%;left:4%;}
-
-  /* GREENHOUSE */
-  .greenhouseText {top:8%;left: 6%;}
-
-  /* MAMMOTH */
-  .mammothText {top: 27%;right: 13%;}
-
-  /* NEW ARRIVALS */
-  .newarrivalsText {top:13%;left: 21%;}
-
-  /* LIKELIHOOD */
-  .likeliDiv {width:1008px;margin: 40px auto;}
-
-  /* INSPIRED KITCHEN */
-  .insprdktchnText{top: 5%;right: 9%;}
-
-  /* VALENTINES DAY */
-  .valentinesText{top:19%;left: 6%;}
-  
-/*   WEDDING SWEEPS */
-  .wedSweepText {text-align:center;left:0;right:0;top:50%;transform:translateY(-50%);}
-
-  /* ARTIST & DESIGNER */
-  .artistdesignerImg{width:70%;max-width:1120px;float: left;}
-  .artistdesignerText{color: #222;text-decoration:none; width: 26%;float: left;margin: 16% 0 0 38px;}
-  .artistdesignerheadshotImg{width:45%;max-width:201px;margin-bottom: 3%;}
-
-  /* ROOMS WE LOVE */
-  .rwlText{top:9%;left: 10%;}
-
-  /* BLOG */
+	.likeliDiv {width:1008px;margin:2% auto;}
+	.heroText {top:15%;left:5vw;color:#fff;}
+	.greenText {text-align:right;top:50%;width:35%;}
+	.cbccText {width:53%;right:0;top:50%;transform:translateY(-50%);}
+	.cbccText sup {top:-0.7vw;}
+	.bedsText {top:22%;left:32vw;}
+	.vdayText {width:64%;right:0;top:76%;}
+	.kitchenText {top:11%;left:68vw;}
+	.wedSweepText {text-align:center;left:0;right:0;top:50%;transform:translateY(-50%);}
+	.rwlText {top:2%;left:20vw;}
+	.artistDiv {width:34%;text-align:left;right:0;top:50%;transform:translateY(-50%);}
+	/* BLOG */
   .blogDiv {width:70%;min-width: 824px;max-width:1176px;position:relative;overflow:hidden;margin:2% auto;}
+	.blogDiv img {width:100%;}
   .blogLogo {width: 20%;margin: 0% auto;max-width: 207px;position: relative;display: block;padding-top: 5%;}
   .blogText { color: #fff;width: 100%;position: absolute;bottom: 0;left: 0;padding: 3%;background-color: #222;margin: 0;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
   .blogInDivBig {width: 66.5%;float: left;}
   .blogInDivSmall {width:33%;float: left;margin-right: .5%;}
   .blogDiv a {position: relative; float: left;}
-
   /*REGISTRY*/
   .registryText {position:absolute;left:30vw;top: 50%;transform: translateY(-50%);}
- 
   /*CURALATE*/
-    #curalate-fan-reel-wrapper {width:70%;overflow:auto;margin:1% auto;}
-    .curalateText {display: block;margin: 0 auto;padding-top: 5%;}
-    .curalateMargins {min-width: 824px;max-width:1176px;position:relative;}
-    .curalateDiv {width: 100%;max-width: 1680px;min-width: 1024px;background-color: #f0f0f0;    padding-bottom: 6%;
+  #curalate-fan-reel-wrapper {width:70%;overflow:auto;margin:1% auto;}
+  .curalateText {display: block;margin: 0 auto;padding-top: 5%;}
+  .curalateMargins {min-width: 824px;max-width:1176px;position:relative;}
+  .curalateDiv {width: 100%;max-width: 1680px;min-width: 1024px;background-color: #f0f0f0;    padding-bottom: 6%;
     margin-top: 3%;}
   /*CURALATE*/
-
-  /*RANDOM*/
-  .divMargins {margin-bottom: 2% !important;}
-  /*RANDOM*/
+	/*PAGE BOTTOM*/
   .bottomLinks {width: 100%;min-width: 1024px;max-width: 1540px;margin: 2% 0 0 0;}
   .bottomquad {margin: 4% 2% 2% 2%;padding-bottom: 4%;display: flex;max-width: 1540px;}
   .quarterContent {flex: 0 1 25%;padding: 0 1vw 0 1vw;margin-right: 2vw;}
@@ -117,16 +106,13 @@
     .headlineM {font-size:32px;line-height:36px;letter-spacing:-1.02px;}
     .headlineS {font-size:24px;line-height:28px;}
     .copyXL {font-size:24px;line-height:28px;}
-    .copyL {font-size:21px;line-height:24px;letter-spacing:-.84px;}
+    .copyL {font-size:20px;line-height:24px;letter-spacing:-.84px;}
     .copyM {font-size:16px;line-height:20px;}
     .copyS {font-size:14px;line-height:20px;}
     /*1024px*/
     .cmsArrowR {border-width:4px;}
     .ctaMargin {margin: 10.24px 0;}
     .badgeSize{left:20.48px;height:128px;width:128px;}
-    
-    /* FREE SHIPPING  */
-    .freeshipText {right:71.68px;}
     /*REGISTRY*/
     .registryText {left:307.2px;}
     /*REGISTRY*/
@@ -136,6 +122,12 @@
     /*PAGE BOTTOM*/
     .quarterContent {padding-left: 20.48px;}
     /*PAGE BOTTOM*/
+
+    .heroText {left:51.20px;}
+		.cbccText sup {top:-7.17px;}
+		.bedsText {left:327.68px;}
+		.kitchenText {left:696.32px;}
+		.rwlText {left:204.80px;}
   }
 
   /*--- 1680px ---*/
@@ -146,15 +138,12 @@
     .headlineS {font-size:32px;line-height:36px;}
     .copyXL {font-size:32px;line-height:36px;}
     .copyL {font-size:24px;line-height:28px;letter-spacing:-.51px;}
-    .copyM {font-size:21px;line-height:24px;}
+    .copyM {font-size:20px;line-height:24px;}
     .copyS {font-size:16px;line-height:20px;}
     /* 1680px */
     .cmsArrowR {border-width:7px;}
     .ctaMargin {margin: 16.8px 0 ;}
     .badgeSize{left:33.6px;height:210px;width:210px;}
-
-    /* FREE SHIPPING  */
-    .freeshipText {right:117.60px;}
     /*REGISTRY*/
     .registryText {left:504px;}
     /*REGISTRY*/
@@ -166,93 +155,68 @@
     .bottomLinks {margin: 3.36px 0 0% 0;}
     .quarterContent {padding-left: 33.60px;}
     /*PAGE BOTTOM*/
+
+    .heroText {left:84.00px;}
+		.cbccText sup {top:-11.76px;}
+		.bedsText {left:537.60px;}
+		.kitchenText {left:1142.40px;}
+		.rwlText {left:336.00px;}
   }
 </style>
 
-<!-- FREE SHIPPING -->
+<!-- HERO -->
 <div class='fullDiv'>
-  <a class='jsPopup cmsBlack' href="/SharedLayer/ShowPopup?popupname=FREESHIPPING">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_FrShp49_20170116?wid=1680" alt=''>
-    <div class='textDiv freeshipText'>
-      <p class="crate-utopia-italic headlineM">Today Only</p>
-      <p class="crate-helvetica-bold headlineXL subMargin">Free Shipping</p>
-      <p class="crate-helvetica-roman headlineM subMargin">on orders of $49 or more.</p>
-      <p class="crate-helvetica-bold copyL subMargin">See Details <span class="cmsArrowR whtArrw"></span></p>
-    </div>
-  </a>
-</div>
-
-<!-- MEDIA SALE -->
-<div class='fullDiv'>
-  <a href="/furniture/media-stands-consoles/1">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_MdStndCnsl_20170116?wid=1680" alt=''>
-    <div class='textDiv consoleText'>
-      <p class="crate-utopia-italic copyM">Ends Today</p>
-      <p class="crate-helvetica-bold headlineM">Up to <span class="cmsRed">20% off</span><br>Media Stands<br>and Consoles</p>
-      <p class="crate-helvetica-roman copyM subMargin">Ends January 16. Exclusions apply.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin">Shop the Sale <span class="cmsArrowR whtArrw"></span></p>
+  <a href="/special-features/texture-design-trend/1">
+    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_NtrlTxtr_20170201?wid=1680" alt=''>
+    <div class='textDiv heroText'>
+      <p class='crate-helvetica-bold headlineL'>A quiet statement<br>with a bold message.</p>
+      <p class='crate-helvetica-bold copyL ctaMargin'>Shop Natural Textures <span class="cmsArrowR whtArrw"></span></p>
     </div>
   </a>
 </div>
 
 <!-- GREENHOUSE -->
-<div class='fullDiv'>
-  <a href="/conservatory-decor">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_FlwrShp_20170101?wid=1680" alt=''>
-    <div class='textDiv greenhouseText'>
-      <p class="crate-helvetica-bold headlineM">Greenhouse</p>
-      <p class="crate-helvetica-roman copyM subMargin">Botanicals that look as<br>natural as the real thing.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin">Shop Greenhouse <span class="cmsArrowR"></span></p>
-    </div>
-  </a>
-</div>
-
-<!-- MAMMOTH -->
 <div class='marginDiv'>
-  <a href="/mammoth-leather-chair/s231553">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_MmthChr_20170101?wid=1680" alt=''>
-    <div class='textDiv mammothText'>
-      <p class="crate-helvetica-bold headlineM">Mammoth: <span class="crate-helvetica-light"><br>An Instant Classic</span></p>
-      <p class="crate-helvetica-roman copyM subMargin">A modern cocoon of buttery leather that&rsquo;s<br>destined to become your new favorite spot.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin">Learn More <span class="cmsArrowR"></span></p>
+  <a href="/conservatory-decor">
+    <div style='width:62%;float:right;'>
+      <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_Greenhouse_20170201" alt=''>
+    </div>
+    <div class='textDiv greenText'>
+      <p class='crate-helvetica-bold headlineM'>It&rsquo;s unreal how<br>real they look.</p>
+      <p class='crate-helvetica-bold copyM ctaMargin'>Shop Greenhouse <span class="cmsArrowR"></span></p>
     </div>
   </a>
 </div>
 
-<!-- NEW ARRIVALS -->
+<!-- BEDS -->
 <div class='fullDiv'>
-  <a href="/whats-new/">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_NwArrvls_20170102?wid=1680" alt=''>
-    <div class='textDiv newarrivalsText'>
-      <p class="crate-helvetica-bold headlineM ">Look what&rsquo;s just<br>around the curve.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin ">Shop New Arrivals <span class="cmsArrowR "></span></p>
+  <a href="/bedroom-collections/">
+    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_Beds_20170201?wid=1680" alt=''>
+    <div class='textDiv bedsText'>
+      <p class='crate-helvetica-thin headlineM'><strong>Naps:</strong><br>perfectly poised<br>for a comeback.</p>
+      <p class='crate-helvetica-bold copyM ctaMargin'>Shop Beds <span class="cmsArrowR"></span></p>
     </div>
   </a>
 </div>
 
-<!-- INSPIRED KITCHEN -->
+<!-- Valentines Day -->
 <div class='fullDiv'>
-  <a href="/shop-by-room/avalon-kitchen/1">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_InsprdKtchn_20170101?wid=1680" alt=''>
-    <div class='textDiv insprdktchnText'>
-      <p class="crate-helvetica-bold headlineM ">Life happens here.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin ">Shop Inspired Kitchen <span class="cmsArrowR "></span></p>
+  <a href="/valentines-day/1">
+    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_VlntnsDy_20170201?wid=1680" alt=''>
+    <div class='textDiv vdayText'>
+      <p class='crate-helvetica-thin headlineM'>Wine and Cheese. <strong>What a Pair.</strong></p>
+      <p class='crate-helvetica-bold copyM ctaMargin'>Shop Valentines Day <span class="cmsArrowR"></span></p>
     </div>
   </a>
 </div>
 
-<!-- LIKELYHOOD -->
-<div class='likeliDiv'>
-  <script>!window.lkhd_BFp88A&&addEventListener('message',function(m){if(m.data.id==='BFp88A'){if(window._satellite&&window._satellite.lkhdImpression){window._satellite.lkhdImpression(m.data.id,m.data.type)}else{(window.s_lkhd=window.s_lkhd||[]).push(m.data)}}});window.lkhd_BFp88A=1</script><iframe id="BFp88A" src="https://published.likelihood.com/render/c401256/latest/BFp88A" width="1008" height="498" style="border:0"></iframe>
-</div>
-
-<!-- VALENTINES DAY -->
+<!-- Kitchen -->
 <div class='fullDiv'>
-  <a href="/valentines-day/">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_VlntnsDy_20170101?wid=1680" alt=''>
-    <div class='textDiv valentinesText'>
-      <p class="crate-helvetica-bold headlineM cmsWhite"><span class="crate-helvetica-light">Wine and cheese.</span><br>What a pair.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin cmsWhite">Shop Valentine&rsquo;s Day <span class="cmsArrowR whtArrw"></span></p>
+  <a href="/kitchen-and-food/kitchen-styles/">
+    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_InsprdKtchn_20170201?wid=1680" alt=''>
+    <div class='textDiv kitchenText'>
+      <p class='crate-helvetica-bold headlineM ctaMargin'>A throwback<br>hue that&rsquo;s never<br>looked fresher.</p>
+      <p class='crate-helvetica-bold copyM ctaMargin'>Shop Inspired Kitchen <span class="cmsArrowR"></span></p>
     </div>
   </a>
 </div>
@@ -262,35 +226,94 @@
   <a href="/crateweddingsweeps">
     <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_WddngSwpstks_20170116?wid=1680" alt=''>
     <div class='textDiv wedSweepText'>
-      <p class="crate-helvetica-roman copyM"><strong>#CrateWedding</strong>Sweepstakes</p>
+      <p class="crate-helvetica-roman copyM"><strong>#cratewedding</strong>sweepstakes</p>
       <p class="crate-helvetica-bold headlineM">30 Days, 30 Must-Have Prizes</p>
-      <p class="crate-helvetica-roman copyM subMargin">	Big day on the way? Share your wedding prep moments on Instagram using #CrateWeddingSweepstakes<br>for your chance to win great registry items. Ends February 14.</p>
+      <p class="crate-helvetica-roman copyM subMargin"> Big day on the way? Share your wedding prep moments on Instagram using #crateweddingsweepstakes<br>for your chance to win great registry items. Ends February 14.</p>
       <p class="crate-helvetica-bold copyM ctaMargin">Learn More <span class="cmsArrowR"></span></p>
     </div>
   </a>
 </div>
 
-<!-- ARTIST & DESIGNER -->
-<div class='marginDiv'>
-  <a href="/artists-and-designers/Bill-Eastburn/1">
-    <img class='artistdesignerImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_ArtstDsgnrBllEstbrn_20170101?wid=1120" alt=''>
-    <div class='pR artistdesignerText'>
-      <img class='artistdesignerheadshotImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_ArtstDsgnrBllEstbrnHeadshot_20170101?wid=201" alt=''>
-      <p class="crate-helvetica-bold headlineM "><span class="crate-helvetica-light">Meet Designer</span><br>Bill Eastburn</p>
-      <p class="crate-helvetica-roman copyM subMargin "><span style="margin-left: -2%;">&ldquo;</span>An antique Shaker worktable<br>inspired me while on a trip through<br>New England.&rdquo; <span class="cmsArrowR whtArrw"></span></p>
-      <p class="crate-helvetica-bold copyM ctaMargin ">Shop Bill Eastburn <span class="cmsArrowR"></span></p>
+<!-- LIKELYHOOD -->
+<div class='likeliDiv'>
+  <script>!window.lkhd_BFp88A&&addEventListener('message',function(m){if(m.data.id==='BFp88A'){if(window._satellite&&window._satellite.lkhdImpression){window._satellite.lkhdImpression(m.data.id,m.data.type)}else{(window.s_lkhd=window.s_lkhd||[]).push(m.data)}}});window.lkhd_BFp88A=1</script><iframe id="BFp88A" src="https://published.likelihood.com/render/c401256/latest/BFp88A" width="1008" height="498" style="border:0"></iframe>
+</div>
 
+<!-- CAROUSEL -->
+<div class='fullDiv'>
+  <a href="/outdoor-furniture-collections/">
+  	<div class="outdoorCaro">
+	    <div><img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnRegent_20170201?wid=1680" alt=''></div>
+	    <div><img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnRegatta_20170201?wid=1680" alt=''></div>
+	    <div><img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnRocha_20170201?wid=1680" alt=''></div>
+	    <div><img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnAster_20170201?wid=1680" alt=''></div>
+	  </div>
+	</a>
+  
+  <div class='caroText'>
+  	<div class='outdoorCaro-Text'>
+      <div>
+      	<p class='crate-helvetica-thin headlineM'>Regent:<br><strong>An ode to relaxed<br>refinement.</strong></p>
+      	<a href="/outdoor-furniture-collections/">
+      		<p class='crate-helvetica-bold copyM ctaMargin'>Shop Outdoor <span class="cmsArrowR"></span></p
+      			></a>
+      </div>
+      <div>
+      	<p class='crate-helvetica-thin headlineM'>Regatta:<br><strong>High-quality teak<br>hits the deck.</strong></p>
+      	<a href="/outdoor-furniture-collections/">
+      		<p class='crate-helvetica-bold copyM ctaMargin'>Shop Outdoor <span class="cmsArrowR"></span></p>
+      	</a>
+      </div>
+      <div>
+      	<p class='crate-helvetica-thin headlineM'>Rocha:<br><strong>The warm look<br>of real wood.</strong></p>
+      	<a href="/outdoor-furniture-collections/">
+      		<p class='crate-helvetica-bold copyM ctaMargin'>Shop Outdoor <span class="cmsArrowR"></span></p>
+      	</a>
+      </div>
+      <div>
+      	<p class='crate-helvetica-thin headlineM'>Aster:<br><strong>A dose of<br>café culture.</strong></p>
+      	<a href="/outdoor-furniture-collections/">
+      		<p class='crate-helvetica-bold copyM ctaMargin'>Shop Outdoor <span class="cmsArrowR"></span></p>
+      	</a>
+      </div>
+    </div>
+    <div class='arrowContainer'>
+      <div class='saleBtn prevBtn'>
+        <svg viewBox="0 0 115.1 219.7" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1">
+          <polygon points="115.1,5.2 109.9,0 5.2,104.6 0,109.9 5.2,115.1 5.2,115.1 109.9,219.7 115.1,214.5 10.4,109.9 "></polygon>
+        </svg>
+      </div>
+      <div class='saleBtn nextBtn'>
+        <svg viewBox="0 0 115.1 219.7" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1">
+          <polygon points="0,5.2 5.2,0 109.9,104.6 115.1,109.9 109.9,115.1 109.9,115.1 5.2,219.7 0,214.5 104.6,109.9 "></polygon>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Artists and Designers -->
+<div class='marginDiv'>
+  <a href="/artists-and-designers/blake-tovin/1">
+    <div style='width:62%;float:left;'>
+      <img style='width:100%' src="//images.crateandbarrel.com/is/image/Crate/dHP_ArtsDsgnr_20170201" alt=''>
+    </div>
+    <div class='textDiv artistDiv'>
+       <img style='width:28%;margin-bottom:3%;' src="//images.crateandbarrel.com/is/image/Crate/dHP_ArtsDsgnrHeadshot_20170201" alt=''>
+      <p class="crate-helvetica-thin headlineM">Meet Designer<br><strong>Blake Tovin</strong></p>
+      <p class="crate-helvetica-roman copyM">“The Arch bed is a modern take<br>on the classic American<br>bentwood bed, pared down to<br>its essential elements.”</p>
+      <p class="crate-helvetica-bold copyM ctaMargin">Shop Blake Tovin <span class="cmsArrowR"></span></p>
     </div>
   </a>
 </div>
 
 <!-- ROOMS WE LOVE -->
 <div class='fullDiv'>
-  <a href="/shop-by-room/montclair-classic-neutral-living-room/1">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_RmsWLv_20170101?wid=1680" alt=''>
+  <a href="/shop-by-room/dryden-elegant-living-room/1">
+    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_RmsWeLv_20170201?wid=1680" alt=''>
     <div class='textDiv rwlText'>
-      <p class="crate-helvetica-bold headlineM ">Relax your notions<br>of all things refined.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin ">Shop This Room <span class="cmsArrowR "></span></p>
+      <p class="crate-helvetica-bold headlineM">Make your modern great room shine.</p>
+      <p class="crate-helvetica-bold copyM ctaMargin">Shop This Room <span class="cmsArrowR"></span></p>
     </div>
   </a>
 </div>
@@ -344,7 +367,6 @@
 <!-- REGISTRY -->
 
 <!-- BOTTOM OF PAGE -->
-
 <div style="background: #f3f3f3;">
   <div class="bottomLinks divMargins" style="margin: auto;">
     <p class="headlineS crate-helvetica-light" style="text-align:center;padding-top:3%;">Attention to the details</p>
@@ -359,7 +381,7 @@
 
       <div class="quarterContent bordertop">
         <a href="/gift-registry/" style="text-decoration: none;">
-          <p class="crate-helvetica-bold cmsBlack copyL">Free Shipping on Gift&nbsp;Registry orders orders of $49&nbsp;or&nbsp;more.</p>
+          <p class="crate-helvetica-bold cmsBlack copyL">Free Shipping on Gift&nbsp;Registry orders of $99&nbsp;or&nbsp;more.</p>
           <p class="copyXS cmsBlack crate-helvetica-roman">Some exclusions apply.</p>
         </a>
       </div>
@@ -383,8 +405,47 @@
   </div>
 </div>
 
+<script type="text/javascript" src="https://d116tqlcqfmz3v.cloudfront.net/crateandbarrel-288/gallery.js"></script>
+<script defer type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
-<script type="text/javascript" src="//d116tqlcqfmz3v.cloudfront.net/crateandbarrel-288/gallery.js"></script>
-<script>
-  Curalate.FanReels.Gallery.init({ code: "crateandbarrel", filters: {tags: "homepage"} });
+<script type="text/javascript">
+  Curalate.FanReels.Gallery.init({ code: "crateandbarrel", filters: {tags: "homepage"} })  
+
+  function runTheThings(){
+  	$(document).ready(function() {
+	  	$('.outdoorCaro').slick({
+	  		dots: false,
+		    arrows: false,
+		    infinite: true,
+		    fade:true,
+		    speed: 1500,
+		    cssEase: 'ease-in-out',
+		    asNavFor: '.outdoorCaro-Text',
+		    autoplay: true,
+		    autoplaySpeed: 3000
+		  });
+		  $('.outdoorCaro-Text').slick({
+		  	asNavFor: '.outdoorCaro',
+		    fade:true,
+		    speed: 1200,
+		    dots: true,
+		    prevArrow: $('.prevBtn'),
+		    nextArrow: $('.nextBtn')  
+		  });
+		})
+  };
+
+  function jQueryIsLoaded() {
+		if (window.jQuery) {
+			console.log("jQuery is loaded");
+
+			runTheThings();
+		} else {
+			setTimeout(jQueryIsLoaded, 50);
+		}
+	}
+
+	jQueryIsLoaded();
+	
 </script>

@@ -1,5 +1,24 @@
 <style>
-	/*-----------BREAKOUT-----------*/
+  #innerDiv {width:400%;transition:margin 1s ease-in-out;}
+#innerDiv img{width:25%;float:left;}
+.saleBtn {position: absolute;top: 0;bottom: 0;height: 15%;cursor: pointer;width: 2vw;}
+.prevBtn {display:none;margin: auto;padding-left: .75vw;left: 0;}
+.nextBtn {margin: auto;padding-right: 3vw;right: 0;}
+.position-1{margin-left:0%;}
+.position-2{margin-left:-100%;}
+.position-3{margin-left:-200%;}
+.position-4{margin-left:-300%;}
+.dotContainer {position:absolute;bottom:5%;left:0;right:0;margin:auto;width:9vw;}
+.tabDot {height:1vw;width:1vw;background-color:#fff;float:left;border-radius:50%;margin:0 .5vw;cursor:pointer;}
+.tabDot:hover, .tabDot-active {background-color:#4D4D4E;}
+.outdoorText {
+  top:10%;left:6vw;
+  background-color:#fff;
+  padding:3vw 2vw 2vw;
+}
+
+
+/*-----------BREAKOUT-----------*/
   .fullWidth .width1008Center {margin: 0 auto !important;width: 100% !important;max-width:1680px;}
   #footerContainer {float: none !important;margin: -1px auto 30px !important;}
   #topNavContainer {border:none;}
@@ -46,7 +65,7 @@
   /* RANDOM */
   
   /*   FREE SHIPPING */
-  .freeshipText {color:#fff;top:10%;right:7vw;text-align:right;}
+  .freeshipText {color:#fff;top:10%;right:19vw;text-align:right;}
 
   /* MEDIA SALE */
   .consoleText {color:#222;top:10%;left:4%;}
@@ -55,10 +74,10 @@
   .greenhouseText {top:8%;left: 6%;}
 
   /* MAMMOTH */
-  .mammothText {top: 27%;right: 13%;}
+  .mammothText {top:67%;left:0;text-align:right;}
 
   /* NEW ARRIVALS */
-  .newarrivalsText {top:13%;left: 21%;}
+  .newarrivalsText {width:59.77vw; top:80%;left:0;text-align:right;} 
 
   /* LIKELIHOOD */
   .likeliDiv {width:1008px;margin: 40px auto;}
@@ -68,6 +87,7 @@
 
   /* VALENTINES DAY */
   .valentinesText{top:19%;left: 6%;}
+  .vdayText{z-index: 2;color: #fff;left: 52vw;top: 62%;}
   
 /*   WEDDING SWEEPS */
   .wedSweepText {text-align:center;left:0;right:0;top:50%;transform:translateY(-50%);}
@@ -126,10 +146,19 @@
     .badgeSize{left:20.48px;height:128px;width:128px;}
     
     /* FREE SHIPPING  */
-    .freeshipText {right:71.68px;}
+    .freeshipText {right:194.56px;}
+    .newarrivalsText {width:612.04px;} 
+    /* FURNITURE */
+    .saleBtn{width: 20.48px;}
+    .prevBtn{padding-left: 7.68px;}
+    .nextBtn{padding-right: 50.40px;}
+    .dotContainer {width:92.16px;}
+    .tabDot {height:10.24px;width:10.24px;margin:0 5.12px;}
+    .outdoorText {left:61.44px;padding:50.40px 20.48px 20.48px;}
     /*REGISTRY*/
     .registryText {left:307.2px;}
     /*REGISTRY*/
+    .vdayText{left: 532.48px;}
     /*CURALATE*/
     .curalateText {margin-left:20.48px;}
     /*CURALATE*/
@@ -154,10 +183,19 @@
     .badgeSize{left:33.6px;height:210px;width:210px;}
 
     /* FREE SHIPPING  */
-    .freeshipText {right:117.60px;}
+    /* FURNITURE */
+    .newarrivalsText {width:1004.14px;} 
+    .freeshipText {right:319.20px;}
+    .saleBtn{width: 33.60px;}
+    .prevBtn{padding-left: 12.60px;}
+    .nextBtn{padding-right: 30.72px;}
+    .dotContainer {width:151.20px;}
+    .tabDot {height:16.80px;width:16.80px;margin:0 8.40px;}
+    .outdoorText {left:100.80px;padding:30.72px 33.60px 33.60px;}
     /*REGISTRY*/
     .registryText {left:504px;}
     /*REGISTRY*/
+    .vdayText{left: 873.60px;}
     /*CURALATE*/
     .curalateText {margin-left:33.60px;width:100%;}
     #curalate-fan-reel-wrapper {width:100%;}
@@ -169,40 +207,36 @@
   }
 </style>
 
-<!-- FREE SHIPPING -->
-<div class='fullDiv'>
-  <a class='jsPopup cmsBlack' href="/SharedLayer/ShowPopup?popupname=FREESHIPPING">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_FrShp49_20170116?wid=1680" alt=''>
-    <div class='textDiv freeshipText'>
-      <p class="crate-utopia-italic headlineM">Today Only</p>
-      <p class="crate-helvetica-bold headlineXL subMargin">Free Shipping</p>
-      <p class="crate-helvetica-roman headlineM subMargin">on orders of $49 or more.</p>
-      <p class="crate-helvetica-bold copyL subMargin">See Details <span class="cmsArrowR whtArrw"></span></p>
-    </div>
-  </a>
-</div>
-
-<!-- MEDIA SALE -->
-<div class='fullDiv'>
-  <a href="/furniture/media-stands-consoles/1">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_MdStndCnsl_20170116?wid=1680" alt=''>
-    <div class='textDiv consoleText'>
-      <p class="crate-utopia-italic copyM">Ends Today</p>
-      <p class="crate-helvetica-bold headlineM">Up to <span class="cmsRed">20% off</span><br>Media Stands<br>and Consoles</p>
-      <p class="crate-helvetica-roman copyM subMargin">Ends January 16. Exclusions apply.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin">Shop the Sale <span class="cmsArrowR whtArrw"></span></p>
-    </div>
-  </a>
-</div>
-
 <!-- GREENHOUSE -->
 <div class='fullDiv'>
   <a href="/conservatory-decor">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_FlwrShp_20170101?wid=1680" alt=''>
+    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_GrnHs_20170117?wid=1680" alt=''>
     <div class='textDiv greenhouseText'>
-      <p class="crate-helvetica-bold headlineM">Greenhouse</p>
-      <p class="crate-helvetica-roman copyM subMargin">Botanicals that look as<br>natural as the real thing.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin">Shop Greenhouse <span class="cmsArrowR"></span></p>
+      <p class="crate-helvetica-bold headlineL">Greenhouse</p>
+      <p class="crate-helvetica-roman copyL subMargin">Botanicals that look as natural<br>as the real thing.</p>
+      <p class="crate-helvetica-bold copyL ctaMargin">Shop Greenhouse <span class="cmsArrowR"></span></p>
+    </div>
+  </a>
+</div>
+
+<!-- NEW ARRIVALS -->
+<div class='marginDiv'>
+ <a href="/whats-new/">
+  <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_NwArvls_20170117?wid=1680" alt=''>
+  <div class='textDiv newarrivalsText'>
+    <p class="crate-helvetica-bold headlineM ">Look what&rsquo;s just around the curve.</p>
+    <p class="crate-helvetica-bold copyM ctaMargin ">Shop New Arrivals <span class="cmsArrowR "></span></p>
+  </div>
+  </a>
+</div>
+
+<!-- INSPIRED KITCHEN -->
+<div class='fullDiv'>
+  <a href="/kitchen-and-food/kitchen-styles/">
+    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_InsprdKtchn_20170101?wid=1680" alt=''>
+    <div class='textDiv insprdktchnText'>
+      <p class="crate-helvetica-bold headlineM ">Life happens here.</p>
+      <p class="crate-helvetica-bold copyM ctaMargin ">Shop Inspired Kitchen <span class="cmsArrowR "></span></p>
     </div>
   </a>
 </div>
@@ -210,7 +244,7 @@
 <!-- MAMMOTH -->
 <div class='marginDiv'>
   <a href="/mammoth-leather-chair/s231553">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_MmthChr_20170101?wid=1680" alt=''>
+    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_MmthChr_20170117?wid=1680" alt=''>
     <div class='textDiv mammothText'>
       <p class="crate-helvetica-bold headlineM">Mammoth: <span class="crate-helvetica-light"><br>An Instant Classic</span></p>
       <p class="crate-helvetica-roman copyM subMargin">A modern cocoon of buttery leather that&rsquo;s<br>destined to become your new favorite spot.</p>
@@ -219,24 +253,26 @@
   </a>
 </div>
 
-<!-- NEW ARRIVALS -->
+<!-- VALENTINES DAY -->
 <div class='fullDiv'>
-  <a href="/whats-new/">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_NwArrvls_20170102?wid=1680" alt=''>
-    <div class='textDiv newarrivalsText'>
-      <p class="crate-helvetica-bold headlineM ">Look what&rsquo;s just<br>around the curve.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin ">Shop New Arrivals <span class="cmsArrowR "></span></p>
+  <a href="/valentines-day/1">
+    <div class='textDiv vdayText'>
+      <p class="crate-helvetica-bold headlineM">You&rsquo;re such a<br>sweetheart.</p>
+      <p class="crate-helvetica-bold copyM ctaMargin">Shop Valentine&rsquo;s Day <span class="cmsArrowR whtArrw"></span></p>
     </div>
   </a>
+  <script>!window.lkhd_TAUCdD&&addEventListener('message',function(m){if(m.data.id==='TAUCdD'){if(window._satellite&&window._satellite.lkhdImpression){window._satellite.lkhdImpression(m.data.id,m.data.type)}else{(window.s_lkhd=window.s_lkhd||[]).push(m.data)}}});window.lkhd_TAUCdD=1</script><div style="min-height:576px;max-height:945px"><div style="position:relative;width:100%;min-width:1024px;max-width:1680px;max-height:945px;padding-bottom:56.25%"><iframe id="TAUCdD" src="https://published.likelihood.com/render/c401256/latest/TAUCdD" width="100%" height="100%" style="border:0;position:absolute;min-height:576px;max-height:945px"></iframe></div></div>
 </div>
 
-<!-- INSPIRED KITCHEN -->
+<!-- WEDDING SWEEPS -->
 <div class='fullDiv'>
-  <a href="/shop-by-room/avalon-kitchen/1">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_InsprdKtchn_20170101?wid=1680" alt=''>
-    <div class='textDiv insprdktchnText'>
-      <p class="crate-helvetica-bold headlineM ">Life happens here.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin ">Shop Inspired Kitchen <span class="cmsArrowR "></span></p>
+  <a href="/crateweddingsweeps">
+    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_WddngSwpstks_20170116?wid=1680" alt=''>
+    <div class='textDiv wedSweepText'>
+      <p class="crate-helvetica-roman copyM"><strong>#cratewedding</strong>sweepstakes</p>
+      <p class="crate-helvetica-bold headlineM">30 Days, 30 Must-Have Prizes</p>
+      <p class="crate-helvetica-roman copyM subMargin"> Big day on the way? Share your wedding prep moments on Instagram using #crateweddingsweepstakes<br>for your chance to win great registry items. Ends February 14.</p>
+      <p class="crate-helvetica-bold copyM ctaMargin">Learn More <span class="cmsArrowR"></span></p>
     </div>
   </a>
 </div>
@@ -246,29 +282,41 @@
   <script>!window.lkhd_BFp88A&&addEventListener('message',function(m){if(m.data.id==='BFp88A'){if(window._satellite&&window._satellite.lkhdImpression){window._satellite.lkhdImpression(m.data.id,m.data.type)}else{(window.s_lkhd=window.s_lkhd||[]).push(m.data)}}});window.lkhd_BFp88A=1</script><iframe id="BFp88A" src="https://published.likelihood.com/render/c401256/latest/BFp88A" width="1008" height="498" style="border:0"></iframe>
 </div>
 
-<!-- VALENTINES DAY -->
-<div class='fullDiv'>
-  <a href="/valentines-day/">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_VlntnsDy_20170101?wid=1680" alt=''>
-    <div class='textDiv valentinesText'>
-      <p class="crate-helvetica-bold headlineM cmsWhite"><span class="crate-helvetica-light">Wine and cheese.</span><br>What a pair.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin cmsWhite">Shop Valentine&rsquo;s Day <span class="cmsArrowR whtArrw"></span></p>
-    </div>
-  </a>
+<!-- OUTDOOR CAROUSEL -->
+<div class='fullDiv' id='outerDiv'>
+  <div id='innerDiv' class='position-1'>
+    <a href="/outdoor-furniture/">
+      <img class='' src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnAlfresco_20170117?wid=1680" alt=''>
+      <img class='' src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnDune_20170117?wid=1680" alt=''>
+      <img class='' src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnLounge_20170117?wid=1680" alt=''>
+      <img class='' src="//images.crateandbarrel.com/is/image/Crate/dHP_OtdrFrnVentura_20170117?wid=1680" alt=''>
+    </a>
+  </div>
+  <div class='saleBtn prevBtn'>
+    <svg style="enable-background:new 0 0 115.1 219.7;fill: #fff;width: 2vw;" viewBox="0 0 115.1 219.7" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1">
+      <polygon points="115.1,5.2 109.9,0 5.2,104.6 0,109.9 5.2,115.1 5.2,115.1 109.9,219.7 115.1,214.5 10.4,109.9 "></polygon>
+    </svg>
+  </div>
+  <div class='saleBtn nextBtn'>
+    <svg style="enable-background:new 0 0 115.1 219.7;fill: #fff;width: 2vw;" viewBox="0 0 115.1 219.7" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1">
+      <polygon points="0,5.2 5.2,0 109.9,104.6 115.1,109.9 109.9,115.1 109.9,115.1 5.2,219.7 0,214.5 104.6,109.9 "></polygon>
+    </svg>
+  </div>
+  <div class='dotContainer'>
+    <div id='tabDot1' class='tabDot-active tabDot'></div>
+    <div id='tabDot2' class='tabDot'></div>
+    <div id='tabDot3' class='tabDot'></div>
+    <div id='tabDot4' class='tabDot'></div>
+  </div>
+  <div class='textDiv outdoorText'>
+    <a href="/outdoor-furniture/">
+    <p class="crate-helvetica-bold headlineM">Open your doors,<br>open the possibilities.</p>
+    <p class="crate-helvetica-bold copyM ctaMargin">Shop Outdoor Furniture <span class="cmsArrowR"></span></p>
+   </a>
+  </div>
 </div>
 
-<!-- WEDDING SWEEPS -->
-<div class='fullDiv'>
-  <a href="/crateweddingsweeps">
-    <img class='fullImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_WddngSwpstks_20170116?wid=1680" alt=''>
-    <div class='textDiv wedSweepText'>
-      <p class="crate-helvetica-roman copyM"><strong>#CrateWedding</strong>Sweepstakes</p>
-      <p class="crate-helvetica-bold headlineM">30 Days, 30 Must-Have Prizes</p>
-      <p class="crate-helvetica-roman copyM subMargin">	Big day on the way? Share your wedding prep moments on Instagram using #CrateWeddingSweepstakes<br>for your chance to win great registry items. Ends February 14.</p>
-      <p class="crate-helvetica-bold copyM ctaMargin">Learn More <span class="cmsArrowR"></span></p>
-    </div>
-  </a>
-</div>
+
 
 <!-- ARTIST & DESIGNER -->
 <div class='marginDiv'>
@@ -276,7 +324,7 @@
     <img class='artistdesignerImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_ArtstDsgnrBllEstbrn_20170101?wid=1120" alt=''>
     <div class='pR artistdesignerText'>
       <img class='artistdesignerheadshotImg' src="//images.crateandbarrel.com/is/image/Crate/dHP_ArtstDsgnrBllEstbrnHeadshot_20170101?wid=201" alt=''>
-      <p class="crate-helvetica-bold headlineM "><span class="crate-helvetica-light">Meet Designer</span><br>Bill Eastburn</p>
+      <p class="crate-helvetica-bold headlineM"><span class="crate-helvetica-light">Meet Designer</span><br>Bill Eastburn</p>
       <p class="crate-helvetica-roman copyM subMargin "><span style="margin-left: -2%;">&ldquo;</span>An antique Shaker worktable<br>inspired me while on a trip through<br>New England.&rdquo; <span class="cmsArrowR whtArrw"></span></p>
       <p class="crate-helvetica-bold copyM ctaMargin ">Shop Bill Eastburn <span class="cmsArrowR"></span></p>
 
@@ -359,7 +407,7 @@
 
       <div class="quarterContent bordertop">
         <a href="/gift-registry/" style="text-decoration: none;">
-          <p class="crate-helvetica-bold cmsBlack copyL">Free Shipping on Gift&nbsp;Registry orders orders of $49&nbsp;or&nbsp;more.</p>
+          <p class="crate-helvetica-bold cmsBlack copyL">Free Shipping on Gift&nbsp;Registry orders of $99&nbsp;or&nbsp;more.</p>
           <p class="copyXS cmsBlack crate-helvetica-roman">Some exclusions apply.</p>
         </a>
       </div>
@@ -383,8 +431,75 @@
   </div>
 </div>
 
-
 <script type="text/javascript" src="//d116tqlcqfmz3v.cloudfront.net/crateandbarrel-288/gallery.js"></script>
 <script>
-  Curalate.FanReels.Gallery.init({ code: "crateandbarrel", filters: {tags: "homepage"} });
+  Curalate.FanReels.Gallery.init({ code: "crateandbarrel", filters: {tags: "homepage"} })
+
+  function runTheThings(){
+    $('.nextBtn').click(function() {
+      $('.tabDot').removeClass('tabDot-active');
+      if ($('#innerDiv').hasClass('position-1')){
+        $('.prevBtn').show();
+        $('#tabDot2').addClass('tabDot-active');
+        $('#innerDiv').attr('class', 'position-2');
+      } else if ($('#innerDiv').hasClass('position-2')){
+        $('#innerDiv').attr('class', 'position-3');
+        $('#tabDot3').addClass('tabDot-active');
+      } else if ($('#innerDiv').hasClass('position-3')){
+        $('#innerDiv').attr('class', 'position-4');
+        $('#tabDot4').addClass('tabDot-active');
+        $('.nextBtn').hide();
+      }
+    })
+
+    $('.prevBtn').click(function() {
+      $('.tabDot').removeClass('tabDot-active');
+      if ($('#innerDiv').hasClass('position-4')){
+        $('#tabDot3').addClass('tabDot-active');
+        $('.nextBtn').show();
+        $('#innerDiv').attr('class', 'position-3');
+      } else if ($('#innerDiv').hasClass('position-3')){
+        $('#innerDiv').attr('class', 'position-2');
+        $('#tabDot2').addClass('tabDot-active');
+      } else if ($('#innerDiv').hasClass('position-2')){
+        $('#innerDiv').attr('class', 'position-1');
+        $('#tabDot1').addClass('tabDot-active');
+        $('.prevBtn').hide();
+      }
+    })
+
+    $('.tabDot').click(function(){
+      $thisID = this.id;
+      $('.tabDot').removeClass('tabDot-active');
+      $(this).addClass('tabDot-active');
+      $('.prevBtn').show();
+      $('.nextBtn').show();
+      
+      if ($thisID == 'tabDot1') {
+        $('#innerDiv').attr('class', 'position-1');
+        $('.prevBtn').hide();
+      } if ($thisID == 'tabDot2') {
+        $('#innerDiv').attr('class', 'position-2');
+      } if ($thisID == 'tabDot3') {
+        $('#innerDiv').attr('class', 'position-3');
+      } if ($thisID == 'tabDot4') {
+        $('#innerDiv').attr('class', 'position-4');
+        $('.nextBtn').hide();
+      }
+    });
+
+
+  }
+
+  function jQueryIsLoaded() {
+    if (window.jQuery) {
+      console.log("jQuery is loaded")
+
+      runTheThings();
+    } else {
+      setTimeout(jQueryIsLoaded, 50);
+    }
+  }
+
+  jQueryIsLoaded();
 </script>
